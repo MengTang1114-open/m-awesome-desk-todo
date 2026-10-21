@@ -134,4 +134,4 @@ npm run dist:signed
 
 ## 许可证
 
-MIT，见 [LICENSE](LICENSE)。内置形象、`src/Pet.tsx` 的转头和表情逻辑、`scripts/key.py` 和自己做形象的提示词来自 [page-mascot](https://github.com/nilbuild/page-mascot)（MIT，© Kamran Ahmed）。
+MIT，见 [LICENSE](LICENSE)；第三方声明见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES)。内置形象、`src/Pet.tsx` 的转头和表情逻辑、`scripts/key.py` 和自己做形象的提示词来自 [page-mascot](https://github.com/nilbuild/page-mascot)（MIT，© Kamran Ahmed）。

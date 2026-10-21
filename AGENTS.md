@@ -52,4 +52,4 @@ App 开着时这三样改了一秒内生效，不用重启。改 JSON 时保留�
 - 改界面后：`npm test`、`npm run build`，再 `uv run --with playwright python scripts/ui_check.py <截图目录>` 在浏览器里走一遍、看截图。窗口、点击穿透、系统鼠标只能在 Mac 上 `npm start` 验。
 - `src/todoMd.js` 的 Markdown 格式和 `settings.json` 的字段是对外接口：用户和 AI 会手改，改了要向后兼容并补测试。
 - 内置形象改了以后跑 `scripts/normalize.py`（统一大小、对齐底边），不要用 page-mascot 的 build.py。
-- 内置形象、`scripts/key.py`、提示词来自 page-mascot（MIT），保留 LICENSE 里的署名。
+- 内置形象、`scripts/key.py`、提示词来自 page-mascot（MIT），保留 THIRD_PARTY_NOTICES 里的署名。
