@@ -49,6 +49,20 @@ App 开着时这三样改了一秒内生效，不用重启。改 JSON 时保留�
 
 ## 改这个仓库的代码
 
+| 路径 | 是什么 |
+|---|---|
+| `electron/main.cjs` | 透明置顶窗口、系统鼠标、点击穿透、读写和监听 To-Do.md / settings.json / pets/、菜单栏、右键换形象 |
+| `electron/preload.cjs` | 页面能用的本机能力（类型见 `src/bridge.ts`） |
+| `src/App.tsx` | 四只宠物、清单面板、拖放、增删改 |
+| `src/Pet.tsx` | 一只宠物：按鼠标方向换朝向，戳一下做表情（改自 page-mascot） |
+| `src/todoMd.js` | To-Do.md 的解析和写出、自动归档、快速添加里的日期识别 |
+| `public/pets/` | 内置形象（每个两张 webp）、`index.json` 清单、`names.json` 中文名 |
+| `scripts/add_pet.py` | 用户自己的九宫格 → 去背景、统一大小 → `~/Documents/DeskPet/pets/` |
+| `scripts/key.py` / `normalize.py` | 去纯色背景（来自 page-mascot）/ 统一大小、对齐底边 |
+| `scripts/import_page_mascot.sh` | 从 page-mascot 重新导入内置形象 |
+| `scripts/ui_check.py` / `make_gifs.py` | 浏览器里走一遍交互并截图 / 生成 README 的动图 |
+
+
 - 改界面后：`npm test`、`npm run build`，再 `uv run --with playwright python scripts/ui_check.py <截图目录>` 在浏览器里走一遍、看截图。窗口、点击穿透、系统鼠标只能在 Mac 上 `npm start` 验。
 - `src/todoMd.js` 的 Markdown 格式和 `settings.json` 的字段是对外接口：用户和 AI 会手改，改了要向后兼容并补测试。
 - 内置形象改了以后跑 `scripts/normalize.py`（统一大小、对齐底边），不要用 page-mascot 的 build.py。
