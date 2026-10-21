@@ -1,0 +1,8 @@
+node_modules/
+dist/
+release/
+.DS_Store
+*.tmp
+# 九宫格原图（去绿幕前后、page-mascot 导入的），只提交 public/pets 的成品
+characters/
+__pycache__/
